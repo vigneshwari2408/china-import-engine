@@ -1,4 +1,4 @@
-# 🚢 China's Import Engine — Trade Risk Dashboard
+# 🚢 China's Import Engine: Trade Risk Dashboard
 
 > Analyzing China's import dependencies, maritime supply chain risk, and logistics efficiency across 2.4M+ trade records (2016–2021)
 
@@ -60,8 +60,8 @@ China is the world's largest exporter and second-largest importer, relying on gl
 
 ### Data Cleaning Steps
 
-- Converted `Year` → datetime
-- Mapped `Area` → geographical region (Africa, Americas, Asia, Europe, Oceania)
+- Converted `Year` to datetime
+- Mapped `Area` to geographical region (Africa, Americas, Asia, Europe, Oceania)
 - Computed derived metrics: **MDR** (Maritime Dependency Ratio) and **Logistics Cost Ratio**
 
 ---
@@ -69,7 +69,7 @@ China is the world's largest exporter and second-largest importer, relying on gl
 ## 📐 Methodology
 
 ### Maritime Dependency Ratio (MDR)
-Measures the proportion of imports transported by sea vs. total imports — used to identify which products and supplier countries carry the highest maritime supply chain risk.
+Measures the proportion of imports transported by sea against total imports, used to identify which products and supplier countries carry the highest maritime supply chain risk.
 
 ```
 MDR_Product  = SUM(FobValue if Transport = 'Sea') / SUM(FobValue)
@@ -77,7 +77,7 @@ MDR_Country  = SUM(FobValue if Transport = 'Sea') / SUM(FobValue)  [by Area]
 ```
 
 ### Herfindahl-Hirschman Index (HHI)
-Measures supplier market concentration per commodity. Higher HHI = fewer dominant suppliers = greater disruption risk.
+Measures supplier market concentration per commodity. A higher HHI means fewer dominant suppliers, which means greater disruption risk.
 
 ```
 Low Risk:      HHI < 1500  (diversified supply)
@@ -86,7 +86,7 @@ High Risk:     HHI > 2500  (concentrated, vulnerable)
 ```
 
 ### Transport Efficiency & Potential Savings
-Identifies product-country combinations currently using suboptimal transport modes, calculating the cost delta vs. the cheapest viable alternative.
+Identifies product-country combinations currently using suboptimal transport modes, calculating the cost delta against the cheapest viable alternative.
 
 ---
 
@@ -131,7 +131,7 @@ china-import-engine/
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/china-import-engine.git
+git clone https://github.com/vigneshwari2408/china-import-engine.git
 cd china-import-engine
 
 # Install dependencies
@@ -157,11 +157,11 @@ streamlit run src/app.py
 
 ## 💡 Recommendations
 
-1. **Monitor high-risk categories** — Mineral Products, Plastics/Rubbers, and Foodstuffs have the highest sea dependency.
-2. **Diversify supplier base** — Reduce reliance on single-country sources for high-HHI subcategories.
-3. **Develop alternative transport routes** — Encourage rail and multimodal options to reduce maritime over-dependence.
-4. **Strengthen maritime resilience** — Invest in port infrastructure and logistics contingency planning.
-5. **Optimize modal shifts** — Priority targets: Cereals from Argentina and Australia show the highest potential savings.
+1. **Monitor high-risk categories.** Mineral Products, Plastics/Rubbers, and Foodstuffs have the highest sea dependency.
+2. **Diversify supplier base.** Reduce reliance on single-country sources for high-HHI subcategories.
+3. **Develop alternative transport routes.** Encourage rail and multimodal options to reduce maritime over-dependence.
+4. **Strengthen maritime resilience.** Invest in port infrastructure and logistics contingency planning.
+5. **Optimize modal shifts.** Priority targets: Cereals from Argentina and Australia show the highest potential savings.
 
 ---
 
@@ -174,4 +174,4 @@ Built by: Vigneshwari Nalla · Ganesh Banoth · Abdullatief Kafilat · Balakirev
 ## 📚 References
 
 - UNCTAD Trade Statistics: https://unctadstat.unctad.org/datacentre/dataviewer/US.TransportCosts
-- Harmonized System (HS) Nomenclature — World Customs Organization
+- Harmonized System (HS) Nomenclature, World Customs Organization
