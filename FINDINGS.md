@@ -1,6 +1,6 @@
 # 📋 Key Findings — China's Import Engine
 
-> Plain-English summary of the trade risk analysis. Full details in the [Tableau dashboard](./tableau/ChinaCaseStudy.twbx) and [analysis notebook](./notebooks/mdr_hhi_analysis.ipynb).
+> Plain-English summary of the trade risk analysis. Full details and code in [mdr_hhi_analysis.ipynb](./mdr_hhi_analysis.ipynb).
 
 ---
 
